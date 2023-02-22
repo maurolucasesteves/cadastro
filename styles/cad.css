@@ -1,0 +1,10 @@
+body {
+    background-color: #dddddd;
+  }
+
+  .div-cabecalho {
+    text-align: center; 
+    font-size: 20px; 
+    font-style: bold; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
