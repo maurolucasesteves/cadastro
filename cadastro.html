@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <script src="./js/script.js"></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a onclick="toggleMenu1()">Exibir menu 1</a>
+            <ul id="menu1" style="display: none;">
+                <li><a href="#">Menu1</a></li>
+                <li><a href="#">Menu2</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <a onclick="toggleMenu2()">Exibir menu 2</a>
+            <ul id="menu2" style="display: none;">
+                <li><a href="#">Menu1-2</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="div-cabecalho">
+            <h1>Cadastro de Clientes</h1>
+        </div>
+        <form id="formCadastro" method="get" action=".">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" pattern="[a-z\s]+$" maxlength="150" required>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="telFixo">Telefone Fixo:</label>
+                        <input type="tel" class="form-control" id="telFixo" pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
+                        <label for="telCelular">Telefone Celular:</label>
+                        <input type="tel" class="form-control" id="telCelular" pattern="\(\d{2}\) \d{5}-\d{4}" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="cep">CEP:</label>
+                    <input type="cep" class="form-control" onblur="validacep(this.value);" name="cep" id="cep"
+                        type="text" maxlength="9" required>
+                    <label for="rua">Rua:</label>
+                    <input type="text" class="form-control" id="rua" maxlength="255" required>
+                    <label for="numero">Número:</label>
+                    <input type="text" class="form-control" id="numero" maxlength="5" required>
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" class="form-control" id="bairro" maxlength="30" required>
+                    <label for="obs">Obs:</label>
+                    <input type="text" class="form-control" id="obs" maxlength="50">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" class="form-control" id="cidade" maxlength="50" required>
+                    <label for="uf">Estado:</label>
+                    <input type="text" class="form-control" id="uf" maxlength="2" required>
+                </fieldset>
+                <div class="star-rating">
+                    <label for="score">Score:</label>
+                    <span class="star" data-value="1" onclick="updateStars(this.value)">&#9733;</span>
+                    <span class="star" data-value="2" onclick="updateStars(this.value)">&#9733;</span>
+                    <span class="star" data-value="3" onclick="updateStars(this.value)">&#9733;</span>
+                    <span class="star" data-value="4" onclick="updateStars(this.value)">&#9733;</span>
+                    <span class="star" data-value="5" onclick="updateStars(this.value)">&#9733;</span>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="obsinterna">Observação Interna:</label>
+                <textarea type="text" class="form-control" id="obsinterna" maxlength="255"> </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
+            <button type="cancela" class="btn btn-primary" id="cancela"
+                onclick="limpa_formulario(this.value)">Cancela</button>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
