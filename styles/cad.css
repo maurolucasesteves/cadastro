@@ -1,10 +1,255 @@
-body {
-    background-color: #dddddd;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@1,8..144,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
-  .div-cabecalho {
-    text-align: center; 
-    font-size: 20px; 
-    font-style: bold; 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+:root {
+  --cor-primaria: #dfd9d3;
+  --cor-secundaria: #243763;
+  --cor-terciaria: #FFEBB7;
+  --cor-menu: #3f3419;
+  --cor-hover: #FF6E31;
+  --fonte-titulo: ''Roboto Serif', serif;'
+  --fonte-primaria: 'Krona One', sans-serif;
+  --fonte-secundaria: 'Montserrat', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+}
+/* Alinhar os links na horizontal */
+nav a {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: (var--cor-menu);;
+  padding: 10px;
+  border-radius: 10px;
+  border: var(--cor-hover);
+  text-decoration: none;
+}
+
+/* Alinhar os itens de menu na vertical */
+li {
+  list-style: none;
+  display: block;
+}
+
+/* Definir largura e altura para os menus */
+.lista-menu1 {
+  width: 130px;
+  height: 200px;
+  overflow: auto;
+  margin-left: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+.lista-menu2 {
+  width: 130px;
+  height: 200px;
+  overflow: auto;
+  margin-left: 8%;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+ul {
+  width: 150px;
+  height: 200px;
+  overflow: auto;
+  margin-left: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+/* Adicionar cor cinza aos itens de menu */
+li a {
+  background-color: lightgray;
+  display: block;
+  padding: 10px;
+}
+
+/* Adicionar seleção ao passar o mouse */
+li a:hover {
+  background-color: gray;
+}
+
+/* Ocultar o menu por padrão */
+#menu1,
+#menu2 {
+  display: none;
+}
+
+/* Adicionar seleção ao clicar nos links Exibir menu */
+nav a:active {
+  background-color: gray;
+}
+
+.div-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 15%;
+  padding-left: 10%;
+  justify-content: center;
+}
+h1{
+  font-style: bold;
+  font-family: 'Roboto Serif', serif;
+  
+}
+form {
+  background-color: rgb(183, 182, 182);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px auto;
+
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+fieldset {
+  border-style: none;
+  display:inline-block;
+  padding: 1% 5% 0% 5%;
+  align-items: center;
+}
+label {
+  font-size: 20px;
+  font-family: "Comic Sans MS", sans-serif;
+  align-items:center;
+  text-align: right;
+  padding-top: 10px;
+
+}
+
+input[type="text"], input[type="tel"], input[type="cep"],
+select {
+  width: 18%;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="cep"]:focus,
+select:focus {
+  border: 1px solid rgb(230, 15, 15);
+  box-shadow: 0 0 10px rgb(220, 29, 160);
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="cep"],
+textarea {
+  font-size: 20px;
+}
+input[id="nome"] {
+  width: 74.5%;
+  vertical-align: top;
+}
+textarea {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+input[type="tel"],
+input[type="telefoneCelular"] {
+  width: 13.8%;
+  margin-right: 1%;
+  vertical-align: top;
+}
+input[type="cep"] {
+  width: 11%;
+  margin-right: 1%;
+  vertical-align: top;
+}
+input[id="rua"] {
+  width: 35%;
+  margin-right: 1%;
+  vertical-align: top;
+}
+input[id="numero"] {
+  width: 5%;
+  margin-right: 1%;
+  vertical-align: top;
+}
+input[id="bairro"] {
+  width: 15%;
+  margin-right: 1%;
+  vertical-align: top;
+}
+input[id="obs"] {
+  display: inline-block;
+  width: 25%;
+  margin-right: 1%;
+  vertical-align: top;
+}
+
+input[id="cidade"] {
+  display: inline-block;
+  width: 23%;
+  margin-right: 1%;
+  vertical-align: top;
+}
+
+input[id="uf"] {
+  width: 3%;
+  text-transform: uppercase;
+}
+
+textarea[id="obsinterna"] {
+  display: inline-block;
+  width: 55%;
+  height: 150px;
+  margin-right: 2%;
+  margin-left: 5%;
+  vertical-align: top;
+  resize: none;
+  color: red;
+  background-color: rgb(220, 213, 213);
+  border-radius: 10px;
+}
+label[for="obsinterna"]{
+  padding-left: 6%;
+}
+
+button[id=enviar] {
+  margin-left: 10%;
+  width: 25%;
+  height: 5%;
+  color: blue;
+  border-color: black;
+}
+
+button[id=cancela] {
+  width: 25%;
+  height: 5%;
+  color: rgb(255, 0, 0);
+  border-color: black;
+}
+
+label[for=score] {
+  color: rgb(10, 10, 10);
+}
+.star-rating {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 4%;
+  margin-left: 70%;
+  font-size: 30px;
+  color: #161515;
+}
+
+/*.star-rating .star:hover,
+.star-rating .star:hover~.star {
+  color: rgb(204, 204, 62);
+}*/
+.star-rating .star.selected,
+.star-rating .star.selected ~ .star {
+  color: #ff0;
+}
